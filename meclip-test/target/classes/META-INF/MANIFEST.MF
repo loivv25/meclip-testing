@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Built-By: Admin
+Build-Jdk: 15.0.1
+Implementation-Title: meclip-core
+Implementation-Version: 1.0
+Implementation-Vendor-Id: com.rin.dts
+Implementation-Vendor: Pivotal Software, Inc.
+Implementation-URL: https://platform.spring.io/platform/meclip/meclip-co
+ re/
+Class-Path: .
+Created-By: Maven Integration for Eclipse
+
