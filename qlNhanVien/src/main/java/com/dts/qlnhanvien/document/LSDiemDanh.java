@@ -23,5 +23,4 @@ public class LSDiemDanh extends Base {
     private String employeeId;
 
 
-
 }

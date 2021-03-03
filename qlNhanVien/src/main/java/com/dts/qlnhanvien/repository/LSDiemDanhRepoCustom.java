@@ -19,17 +19,18 @@ public class LSDiemDanhRepoCustom {
 
     @Autowired
     MongoTemplate mongoTemplate;
-    public boolean checkCheckin(String id){
+
+    public boolean checkCheckin(String id) {
 
         Query query = new Query();
         Criteria criteria = new Criteria();
         criteria.and("checkinTime").equals(new Date());
         criteria.and("employeeId").is(id);
         query.addCriteria(criteria);
-        return  mongoTemplate.exists(query, LSDiemDanh.class);
+        return mongoTemplate.exists(query, LSDiemDanh.class);
     }
 
-    public List<LSDiemDanh> getListCheckInToday(int start, int limit){
+    public List<LSDiemDanh> getListCheckInToday(int start, int limit) {
         Query query = new Query();
         Criteria criteria = new Criteria();
         criteria.and("checkinTime").equals(new Date());
@@ -38,5 +39,17 @@ public class LSDiemDanhRepoCustom {
         query.limit(limit);
         return mongoTemplate.find(query, LSDiemDanh.class);
     }
+
+    public List<LSDiemDanh> searchCheckIn(Date startDate, Date endDate, int start, int limit) {
+        Query query = new Query();
+        Criteria criteria = new Criteria();
+        criteria.and("checkinTime").gte(startDate);
+        criteria.and("checkinTime").lte(endDate);
+        query.skip(start);
+        query.limit(limit);
+        query.addCriteria(criteria);
+        return mongoTemplate.find(query, LSDiemDanh.class);
+    }
+
 
 }

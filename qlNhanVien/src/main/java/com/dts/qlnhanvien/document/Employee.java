@@ -13,7 +13,7 @@ import java.util.Date;
 )
 @Setter
 @Getter
-public class Employee extends Base{
+public class Employee extends Base {
 
     @Field("user_id")
     private String userId;

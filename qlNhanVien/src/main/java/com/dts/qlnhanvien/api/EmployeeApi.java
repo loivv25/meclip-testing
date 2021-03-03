@@ -18,27 +18,27 @@ public class EmployeeApi {
     EmployeeService employeeService;
 
     @PostMapping("/create-emp")
-    public Result createEmployee(@RequestBody SignRequest signRequest){
+    public Result createEmployee(@RequestBody SignRequest signRequest) {
         return employeeService.createEmployee(signRequest);
     }
 
     @PostMapping("/login")
     public Result login(@RequestBody LoginRequest loginRequest) throws Exception {
-        return  employeeService.login(loginRequest);
+        return employeeService.login(loginRequest);
     }
 
     @GetMapping("/get-emp-infor")
-    public Result getEmpInfor(@PathVariable("id") String id){
+    public Result getEmpInfor(@PathVariable("id") String id) {
         return employeeService.getEmpInfor(id);
     }
 
     @PutMapping("/update-emp")
-    public Result updateEmp(@RequestBody Employee employee){
-        return  employeeService.updateEmp(employee);
+    public Result updateEmp(@RequestBody Employee employee) {
+        return employeeService.updateEmp(employee);
     }
 
     @PostMapping("/checkin")
-    public Result checkin(@RequestParam String id){
-        return  employeeService.checkin(id);
+    public Result checkin(@RequestParam String id) {
+        return employeeService.checkin(id);
     }
 }

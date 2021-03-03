@@ -5,80 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="450ec95e-432c-45bc-82d0-517b989b497e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Testing.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo/demo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo/src/main/java/com/dts/demo/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo/src/main/java/com/dts/demo/api/UserApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo/src/main/java/com/dts/demo/base/Result.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo/src/main/java/com/dts/demo/docunent/Base.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo/src/main/java/com/dts/demo/docunent/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo/src/main/java/com/dts/demo/docunent/UserExt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo/src/main/java/com/dts/demo/enums/ResultEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo/src/main/java/com/dts/demo/repo/UserExtRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo/src/main/java/com/dts/demo/repo/UserRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo/src/main/java/com/dts/demo/repo/custom/UserCustomRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo/src/main/java/com/dts/demo/request/SignRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo/src/main/java/com/dts/demo/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo/target/classes/com/dts/demo/Application.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../meclip-test/meclip-core.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/qlNhanVien.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/api/AdminApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/api/EmployeeApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/base/Result.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/common/StringUtl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/document/Base.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/document/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/document/LSDiemDanh.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/dto/EmployeeDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/enums/ResultEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/repository/EmployeeRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/repository/EmployeeRepoCustom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/repository/LSDiemDanhRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/repository/LSDiemDanhRepoCustom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/request/ApproEmpoRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/request/Filter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/request/LoginRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/request/SignRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/service/AdminService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/service/EmployeeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/service/IAdminService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/service/IEmployeeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/dts/qlnhanvien/api/EmployeeApi.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/dts/qlnhanvien/base/Result.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/dts/qlnhanvien/document/Base.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/dts/qlnhanvien/document/Employee.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/dts/qlnhanvien/document/LSDiemDanh.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/dts/qlnhanvien/enums/ResultEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/dts/qlnhanvien/repository/EmployeeRepo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/dts/qlnhanvien/request/SignRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/dts/qlnhanvien/service/EmployeeService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/dto/UserReportDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../meclip-testing" beforeDir="false" afterPath="$PROJECT_DIR$/../meclip-testing" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/api/AdminApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/api/AdminApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/api/EmployeeApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/api/EmployeeApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/document/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/document/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/document/LSDiemDanh.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/document/LSDiemDanh.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/dto/EmployeeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/dto/EmployeeDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/repository/EmployeeRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/repository/EmployeeRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/repository/EmployeeRepoCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/repository/EmployeeRepoCustom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/repository/LSDiemDanhRepoCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/repository/LSDiemDanhRepoCustom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/service/AdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/service/IAdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/service/IAdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dts/qlnhanvien/api/EmployeeApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dts/qlnhanvien/api/EmployeeApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dts/qlnhanvien/document/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dts/qlnhanvien/document/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dts/qlnhanvien/repository/EmployeeRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dts/qlnhanvien/repository/EmployeeRepo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dts/qlnhanvien/service/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dts/qlnhanvien/service/EmployeeService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,17 +78,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="qlNhanVien" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.dts.qlnhanvien.Application" />
@@ -162,6 +96,8 @@
       <option name="presentableId" value="Default" />
       <updated>1614734258136</updated>
       <workItem from="1614734259340" duration="26765000" />
+      <workItem from="1614780881631" duration="13299000" />
+      <workItem from="1614815123554" duration="405000" />
     </task>
     <servers />
   </component>
@@ -178,6 +114,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
