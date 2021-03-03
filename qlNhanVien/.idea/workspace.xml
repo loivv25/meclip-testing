@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="450ec95e-432c-45bc-82d0-517b989b497e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Testing.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/demo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/java/com/dts/demo/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/java/com/dts/demo/api/UserApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/java/com/dts/demo/base/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/java/com/dts/demo/docunent/Base.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/java/com/dts/demo/docunent/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/java/com/dts/demo/docunent/UserExt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/java/com/dts/demo/enums/ResultEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/java/com/dts/demo/repo/UserExtRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/java/com/dts/demo/repo/UserRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/java/com/dts/demo/repo/custom/UserCustomRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/java/com/dts/demo/request/SignRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/java/com/dts/demo/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/target/classes/com/dts/demo/Application.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../meclip-test/meclip-core.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/qlNhanVien.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/api/AdminApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/api/EmployeeApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/base/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/common/StringUtl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/document/Base.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/document/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/document/LSDiemDanh.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/dto/EmployeeDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/enums/ResultEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/repository/EmployeeRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/repository/EmployeeRepoCustom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/repository/LSDiemDanhRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/repository/LSDiemDanhRepoCustom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/request/ApproEmpoRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/request/Filter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/request/LoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/request/SignRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/service/AdminService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/service/EmployeeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/service/IAdminService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/service/IEmployeeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/dts/qlnhanvien/api/EmployeeApi.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/dts/qlnhanvien/base/Result.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/dts/qlnhanvien/document/Base.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/dts/qlnhanvien/document/Employee.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/dts/qlnhanvien/document/LSDiemDanh.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/dts/qlnhanvien/enums/ResultEnum.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/dts/qlnhanvien/repository/EmployeeRepo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/dts/qlnhanvien/request/SignRequest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/dts/qlnhanvien/service/EmployeeService.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1pE37TzpyAqIqzwSE6yv0wF63NH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/dts/qlnhanvien/common" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\DTS\qlNhanVien\src\main\java\com\dts\qlnhanvien\common" />
+      <recent name="C:\DTS\qlNhanVien\src\main" />
+      <recent name="C:\DTS\qlNhanVien\src\main\java\sources" />
+      <recent name="C:\DTS\qlNhanVien\src\main\java\com\dts\qlnhanvien" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="qlNhanVien" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dts.qlnhanvien.Application" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="450ec95e-432c-45bc-82d0-517b989b497e" name="Default Changelist" comment="" />
+      <created>1614734258136</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614734258136</updated>
+      <workItem from="1614734259340" duration="26765000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
