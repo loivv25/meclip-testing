@@ -1,10 +1,13 @@
 package com.dts.qlnhanvien.service;
 
+import com.dts.qlnhanvien.base.DateUtil;
 import com.dts.qlnhanvien.base.Result;
+import com.dts.qlnhanvien.common.StringUtl;
 import com.dts.qlnhanvien.document.Employee;
 import com.dts.qlnhanvien.document.LSDiemDanh;
 import com.dts.qlnhanvien.dto.EmployeeDTO;
 import com.dts.qlnhanvien.repository.EmployeeRepo;
+import com.dts.qlnhanvien.repository.LSDiemDanhRepo;
 import com.dts.qlnhanvien.repository.LSDiemDanhRepoCustom;
 import com.dts.qlnhanvien.request.LoginRequest;
 import com.dts.qlnhanvien.request.SignRequest;
@@ -25,6 +28,9 @@ public class EmployeeService implements IEmployeeService {
 
     @Autowired
     LSDiemDanhRepoCustom lsDiemDanhRepoCustom;
+
+    @Autowired
+    LSDiemDanhRepo lsDiemDanhRepo;
 
     @Override
     public Result createEmployee(SignRequest signRequest) {
@@ -47,8 +53,9 @@ public class EmployeeService implements IEmployeeService {
         employee.setEmail(signRequest.getEmail());
         employee.setPhone(signRequest.getPhone());
         employee.setPassword((DigestUtils.md5DigestAsHex(signRequest.getPassword().getBytes(StandardCharsets.UTF_8))));
-        employee.setName_display(signRequest.getDisplayName());
+        employee.setNameDisplay(signRequest.getDisplayName());
         employee.setStatus(1);
+        employee.setAnsiName(StringUtl.getAnsiString(signRequest.getDisplayName()));
 
         employeeRepo.save(employee);
         return Result.success();
@@ -72,7 +79,7 @@ public class EmployeeService implements IEmployeeService {
             EmployeeDTO employeeDTO = new EmployeeDTO();
 
             employeeDTO.setUserId(emp.getUserId());
-            employeeDTO.setNameDisplay(emp.getName_display());
+            employeeDTO.setNameDisplay(emp.getNameDisplay());
             employeeDTO.setPhone(emp.getPhone());
             employeeDTO.setEmail(emp.getEmail());
             employeeDTO.setAddress(emp.getAddress());
@@ -87,39 +94,61 @@ public class EmployeeService implements IEmployeeService {
             return Result.success(employeeDTO);
         }
     }
-        @Override
-        public Result getEmpInfor (String id){
-            Optional<Employee> employeeDTO = employeeRepo.findById(id);
-            if (employeeDTO == null)
-                return Result.fail("Không tồn tại nhân viên này!");
-            return Result.success(employeeDTO);
-        }
 
-        @Override
-        public Result updateEmp (Employee employee){
-            Optional<Employee> emp = employeeRepo.findById(employee.getUserId());
-            if (emp == null)
-                return Result.fail("Không tồn tại nhân viên này!");
-            else employeeRepo.save(employee);
-            return Result.success();
-        }
+    @Override
+    public Result getEmpInfor(String id) {
+        Optional<Employee> employeeDTO = employeeRepo.findById(id);
+        if (employeeDTO == null)
+            return Result.fail("Không tồn tại nhân viên này!");
+        return Result.success(employeeDTO);
+    }
 
-        @Override
-        public Result checkin (String id){
-            Optional<Employee> emp = employeeRepo.findById(id);
-            if (emp == null)
-                return  Result.fail("Không tồn tại nhân viên này!");
+    @Override
+    public Result updateEmp(Employee employee) {
+
+        Optional<Employee> emp = employeeRepo.findById(employee.getId());
+        if (!emp.isPresent())
+            return Result.fail("Không tồn tại nhân viên này!");
+        else {
+
+            if (StringUtils.hasLength(employee.getNameDisplay())) {
+                emp.get().setNameDisplay(employee.getNameDisplay());
+                emp.get().setAnsiName(emp.get().getNameDisplay());
+            }
+            if (StringUtils.hasLength((employee.getPhone())))
+                emp.get().setPhone(employee.getPhone());
+
+            if (StringUtils.hasLength((employee.getEmail())))
+                emp.get().setEmail(employee.getEmail());
+
+            employeeRepo.save(emp.get());
+        }
+        return Result.success();
+    }
+
+    @Override
+    public Result checkin(String id) {
+        Optional<Employee> emp = employeeRepo.findById(id);
+        if (!emp.isPresent())
+            return Result.fail("Không tồn tại nhân viên này!");
+        else {
+            if (lsDiemDanhRepoCustom.checkCheckin(id))
+                return Result.fail("Nhân viên đã điểm danh trong hôm nay!");
             else {
-                if (lsDiemDanhRepoCustom.checkCheckin(id))
-                    return Result.fail("Nhân viên đã điểm danh trong hôm nay!");
-                else {
-                    LSDiemDanh lsDiemDanh = new LSDiemDanh();
-                    lsDiemDanh.setEmployeeId(id);
-                    lsDiemDanh.setCheckinTime(new Date());
-                    lsDiemDanh.setName(emp.get().getName_display());
-                }
+                LSDiemDanh lsDiemDanh = new LSDiemDanh();
+
+                lsDiemDanh.setEmployeeId(id);
+
+                Date today = new Date();
+
+                lsDiemDanh.setCheckinTime(new Date());
+                lsDiemDanh.setCheckinDay(DateUtil.buildPartDate(new Date().getTime()));
+                lsDiemDanh.setName(emp.get().getNameDisplay());
+                lsDiemDanhRepo.save(lsDiemDanh);
+                return Result.success();
+            }
         }
-            return Result.success();
+
     }
 }
 

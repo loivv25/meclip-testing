@@ -1,6 +1,8 @@
 package com.dts.qlnhanvien.service;
 
+import com.dts.qlnhanvien.base.DateUtil;
 import com.dts.qlnhanvien.base.Result;
+import com.dts.qlnhanvien.common.StringUtl;
 import com.dts.qlnhanvien.document.Employee;
 import com.dts.qlnhanvien.dto.EmployeeDTO;
 import com.dts.qlnhanvien.dto.UserReportDTO;
@@ -13,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 import org.springframework.util.StringUtils;
+
 
 import java.nio.charset.StandardCharsets;
 import java.util.Date;
@@ -32,16 +35,22 @@ public class AdminService implements IAdminService {
     EmployeeRepoCustom employeeRepoCustom;
 
     @Override
-    public Result approveEmp(List<String> listEmpId) {
-        System.out.println(listEmpId.toString());
+    public Result approveEmp(String id, int status) {
+        System.out.println(id.toString());
+        Optional<Employee> employee = employeeRepo.findById(id);
+        if (!employee.isPresent())
 
-        listEmpId.forEach((element) -> {
-                    Optional<Employee> employee = employeeRepo.findById(element);
-                    Employee approEmp = employee.get();
-                    approEmp.setStatus(0);
-                    employeeRepo.save(approEmp);
-                }
-        );
+            return Result.fail("Không tồn tại nhân viên này");
+
+        if (employee.get().getStatus() == 1)
+            return Result.fail(("Nhân viên đã được duyệt"));
+
+        if (status != 0 && status != 2) {
+            return Result.fail("Giá trị nhập vào phải là 0: duyệt, 2: không duyệt");
+        }
+
+        employee.get().setStatus(status);
+        employeeRepo.save(employee.get());
         return Result.success();
     }
 
@@ -56,6 +65,14 @@ public class AdminService implements IAdminService {
     public Result filter(Filter filter) {
         System.out.println(filter.toString());
         List<Employee> listEmp = employeeRepoCustom.filter(filter);
+
+        return Result.success(listEmp);
+    }
+
+
+    public Result filter1(Filter filter) {
+        System.out.println(filter.toString());
+        List<Employee> listEmp = employeeRepoCustom.filter(filter);
         List<EmployeeDTO> listEmpDTO = null;
         listEmp.forEach((emp) ->
                 {
@@ -63,7 +80,7 @@ public class AdminService implements IAdminService {
                     empDTO.setEmail(emp.getEmail());
                     empDTO.setPhone(emp.getPhone());
                     empDTO.setAddress(emp.getFacebook());
-                    empDTO.setNameDisplay(emp.getName_display());
+                    empDTO.setNameDisplay(emp.getNameDisplay());
                     empDTO.setSex(empDTO.getSex());
                     empDTO.setBirthday(emp.getBirthday());
                     empDTO.setSkype(emp.getSkype());
@@ -85,11 +102,15 @@ public class AdminService implements IAdminService {
     @Override
     public Result deleteUser(String id) {
         System.out.println(id);
-        if (!employeeRepo.existsById(id))
+        Optional<Employee> employee = employeeRepo.findById(id);
+        if (!employee.isPresent())
             return Result.fail("Không tồn tại nhân viên này");
-        employeeRepo.deleteById(id);
+        else if (employee.get().isDelete())
+            return Result.fail("Người dùng đã bị xóa trước đó");
+        else
+            employee.get().setDelete(true);
+        employeeRepo.save(employee.get());
         return Result.success();
-
     }
 
     @Override
@@ -121,7 +142,8 @@ public class AdminService implements IAdminService {
         employee.setEmail(signRequest.getEmail());
         employee.setPhone(signRequest.getPhone());
         employee.setPassword((DigestUtils.md5DigestAsHex(signRequest.getPassword().getBytes(StandardCharsets.UTF_8))));
-        employee.setName_display(signRequest.getDisplayName());
+        employee.setNameDisplay(signRequest.getDisplayName());
+        employee.setAnsiName(StringUtl.getAnsiString(signRequest.getDisplayName()));
         employee.setStatus(1);
 
         employeeRepo.save(employee);
@@ -131,6 +153,8 @@ public class AdminService implements IAdminService {
     @Override
     public Result createNewListUser(List<SignRequest> signRequestList) {
         System.out.println(signRequestList);
+        List<String> listSuccessUser = null;
+
         signRequestList.forEach((signRequest) ->
                 createNewUser(signRequest));
         return Result.success();
@@ -141,27 +165,33 @@ public class AdminService implements IAdminService {
         System.out.println(id);
 
         Optional<Employee> employee = employeeRepo.findById(id);
-        if (employee == null)
+        if (!employee.isPresent())
             return Result.fail("Không tồn tại nhân viên này");
         Employee emp = employee.get();
         EmployeeDTO empDTO = new EmployeeDTO();
         empDTO.setEmail(emp.getEmail());
         empDTO.setPhone(emp.getPhone());
         empDTO.setAddress(emp.getFacebook());
-        empDTO.setNameDisplay(emp.getName_display());
+        empDTO.setNameDisplay(emp.getNameDisplay());
         empDTO.setSex(empDTO.getSex());
         empDTO.setBirthday(emp.getBirthday());
         empDTO.setSkype(emp.getSkype());
         empDTO.setStartedDate(emp.getStartedDate());
-        return Result.success();
+        return Result.success(empDTO);
+    }
 
+    public Result searchByListId(List<String> listId) {
+        List<Employee> employeeList = employeeRepo.findByIdIn(listId);
+            return Result.success(employeeList);
     }
 
     @Override
-    public Result searchCheckin(Date startDate, Date endDate, int start, int limit) {
+    public Result searchCheckin(String startDate,String endDate, int start, int limit) {
         System.out.println("startDate:" + startDate + "endDate:" + endDate + "start:" + start + "limit:" + limit);
-        Result.success(lsDiemDanhRepoCustom.searchCheckIn(startDate, endDate, start, limit));
-        return null;
+
+        return Result.success(lsDiemDanhRepoCustom.searchCheckIn(DateUtil.parseDate(startDate),
+                DateUtil.parseDate(endDate), start, limit));
+
     }
 
     @Override
@@ -203,9 +233,10 @@ public class AdminService implements IAdminService {
     @Override
     public Result reportUserStatus() {
         UserReportDTO userReportDTO = new UserReportDTO();
-        userReportDTO.setTotalUser(employeeRepo.findAll().stream().count());
-        userReportDTO.setActiveUser(employeeRepo.findAllByStatus(0).size());
-        userReportDTO.setNonActiveUser(employeeRepo.findAllByStatus(1).size());
+        userReportDTO.setTotalUser(employeeRepoCustom.getTotalUser());
+        userReportDTO.setActiveUser(employeeRepoCustom.getActiveUser());
+        userReportDTO.setNonActiveUser(employeeRepoCustom.getNonActiveUser());
+
 
         return Result.success(userReportDTO);
     }
@@ -218,9 +249,14 @@ public class AdminService implements IAdminService {
         if (emp == null)
             return Result.fail("Không tồn tại nhân viên này!");
         else {
-            Employee emp1 = emp.get();
-            emp1.setStatus(status);
-            employeeRepo.save(emp1);
+
+            if (status != 0 & status != 1)
+                return Result.fail("Giá trị nhập vào phải là: 0: hoạt động, 1: nghỉ việc");
+            {
+                Employee emp1 = emp.get();
+                emp1.setStatus(status);
+                employeeRepo.save(emp1);
+            }
         }
         return Result.success();
     }
@@ -228,10 +264,30 @@ public class AdminService implements IAdminService {
     @Override
     public Result updateUserInfor(Employee employee) {
         System.out.println(employee);
-        Optional<Employee> emp = employeeRepo.findById(employee.getUserId());
-        if (emp == null)
+        Optional<Employee> emp = employeeRepo.findById(employee.getId());
+        if (!emp.isPresent())
             return Result.fail("Không tồn tại nhân viên này!");
-        else employeeRepo.save(employee);
+        else {
+
+            if (StringUtils.hasLength(employee.getNameDisplay())) {
+                emp.get().setNameDisplay(employee.getNameDisplay());
+                emp.get().setAnsiName(emp.get().getNameDisplay());
+            }
+            if (StringUtils.hasLength((employee.getPhone())))
+                emp.get().setPhone(employee.getPhone());
+
+            if (StringUtils.hasLength((employee.getEmail())))
+                emp.get().setEmail(employee.getEmail());
+
+            if (employee.getSalary() != null)
+                emp.get().setSalary(employee.getSalary());
+
+            if (StringUtils.hasLength((employee.getPassword())))
+                emp.get().setPassword(employee.getPassword());
+
+
+            employeeRepo.save(emp.get());
+        }
         return Result.success();
     }
 }

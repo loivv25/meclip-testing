@@ -17,10 +17,12 @@ public class LSDiemDanh extends Base {
     @Field("checkin_time")
     private Date checkinTime;
 
+    @Field("checkin_day")
+    private int checkinDay;
+
     private String name;
 
     @Field("employee_id")
     private String employeeId;
-
 
 }

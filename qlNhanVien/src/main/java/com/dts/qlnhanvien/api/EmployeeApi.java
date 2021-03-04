@@ -28,7 +28,7 @@ public class EmployeeApi {
     }
 
     @GetMapping("/get-emp-infor")
-    public Result getEmpInfor(@PathVariable("id") String id) {
+    public Result getEmpInfor(@RequestParam String id) {
         return employeeService.getEmpInfor(id);
     }
 

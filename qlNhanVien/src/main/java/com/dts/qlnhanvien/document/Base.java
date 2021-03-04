@@ -4,12 +4,14 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Field;
+import sun.print.resources.serviceui_it;
 
+import java.io.Serializable;
 import java.util.Date;
 
 @Setter
 @Getter
-public class Base {
+public class Base implements Serializable {
 
     @Id
     private String id;

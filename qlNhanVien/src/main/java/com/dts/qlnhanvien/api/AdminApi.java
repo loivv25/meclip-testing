@@ -18,10 +18,10 @@ public class AdminApi {
     @Autowired
     AdminService adminService;
 
-    @PostMapping("/approve-list-emp")
-    public Result approveListEmployee(@RequestBody List listEmpId) {
-        adminService.approveEmp(listEmpId);
-        return Result.success();
+    @PostMapping("/approve-emp")
+    public Result approveEmployee(@RequestParam String id,
+                                  @RequestParam int status) {
+        return adminService.approveEmp(id, status);
     }
 
     @GetMapping("/get-list-checkin-today")
@@ -41,6 +41,11 @@ public class AdminApi {
     @GetMapping("/search")
     public Result search(@RequestParam String keyword) {
         return adminService.search(keyword);
+    }
+
+    @GetMapping("/search-by-list-id")
+    public Result searchByListId(@RequestBody List<String> ListId) {
+        return adminService.searchByListId(ListId);
     }
 
     @PostMapping("/delete")
@@ -63,14 +68,14 @@ public class AdminApi {
         return adminService.createNewListUser(signRequestList);
     }
 
-    @PostMapping("/get-user")
+    @GetMapping("/get-user")
     public Result searchById(@RequestParam String id) {
         return adminService.searchById(id);
     }
 
     @GetMapping("/search-checkin-by-date")
-    public Result searchCheckinByDate(@RequestParam Date startDate,
-                                      @RequestParam Date endDate,
+    public Result searchCheckinByDate(@RequestParam String startDate,
+                                      @RequestParam String endDate,
                                       @RequestParam int start,
                                       @RequestParam int limit) {
         return adminService.searchCheckin(startDate, endDate, start, limit);
